@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<Language_zh_CN>
+		<Row Tag="TXT_KEY_PROMO_SWITCH_MODE" >
+			<Text>单位完整晋升树开关</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMO_DIPLO_CORNER_HOOK" >
+			<Text>晋升树</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMO_DIPLO_CORNER_HOOK_TT" >
+			<Text>显示晋升树以轻松查看战斗单位可用的晋升</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMO_OPEN_TREE_FOR_UNIT_TT" >
+			<Text>显示晋升树以轻松查看此单位有哪些晋升和可用的晋升</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMO_SIZE" >
+			<Text>小图标（快捷键：'D'）</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMO_EARNT" >
+			<Text>获得的</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMO_EARNT_TT" >
+			<Text>单位已获得的晋升（不包括来自特殊能力和奇观的晋升）</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMO_AVAILABLE" >
+			<Text>可用的</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMO_AVAILABLE_TT" >
+			<Text>该单位目前可以选择的晋升</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMO_NOT_AVAILABLE" >
+			<Text>尚不可用</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMO_NOT_AVAILABLE_TT" >
+			<Text>该单位目前无法使用的晋升</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMO_GROUP_UNIT" >
+			<Text>单位</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMO_GROUP_CLASS" >
+			<Text>战斗分类</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMO_GROUP_BASE" >
+			<Text>晋升树</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMO_GROUP_BASE_TT" >
+			<Text>使用左上角的按钮或快捷键“D”在模式之间切换。</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMO_MOD_DESC_RECON" >
+			<Text>侦察单位</Text>
+		</Row>
+
+	</Language_zh_CN>
+</GameData>

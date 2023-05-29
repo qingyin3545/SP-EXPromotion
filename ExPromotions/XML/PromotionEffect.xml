@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 12/22/2022 4:44:15 PM -->
+<GameData>
+	<!--针对单位战斗类型的伤害调整
+	<UnitPromotions_UnitCombatMods>
+		
+		<Row>
+			<PromotionType>PROMOTION_CARRIER_FIGHTER_MING_YI</PromotionType>
+			<UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType>
+			<Modifier>100</Modifier>
+		</Row>
+
+	</UnitPromotions_UnitCombatMods> -->
+
+	<!--领域加成-->
+	<UnitPromotions_Domains>
+		<!--舰载副炮-->
+		<Row>
+			<PromotionType>PROMOTION_BATTLESHIP_SECONDARY_GUN</PromotionType>
+			<DomainType>DOMAIN_AIR</DomainType>
+			<Modifier>20</Modifier>
+		</Row>
+		<!--海空神剑-->
+		<Row>
+			<PromotionType>PROMOTION_AIR_EXCALIBUR</PromotionType>
+			<DomainType>DOMAIN_LAND</DomainType>
+			<Modifier>50</Modifier>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_AIR_EXCALIBUR</PromotionType>
+			<DomainType>DOMAIN_SEA</DomainType>
+			<Modifier>50</Modifier>
+		</Row>
+	</UnitPromotions_Domains>
+
+	<!--晋升对晋升战斗力加成-->
+	<UnitPromotions_PromotionModifiers>
+		<!--旗舰锁定-->
+		<Row>
+			<PromotionType>PROMOTION_FLAGSHIP_LOCKING</PromotionType>
+			<OtherPromotionType>PROMOTION_CARRIER_UNIT</OtherPromotionType>
+			<Modifier>0</Modifier>
+			<Attack>100</Attack>
+			<Defense>0</Defense>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_FLAGSHIP_LOCKING</PromotionType>
+			<OtherPromotionType>PROMOTION_NAVAL_CAPITAL_SHIP</OtherPromotionType>
+			<Modifier>0</Modifier>
+			<Attack>100</Attack>
+			<Defense>0</Defense>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_FLAGSHIP_LOCKING</PromotionType>
+			<OtherPromotionType>PROMOTION_UNIT_ELITE_BATTLECRUISER_MARK</OtherPromotionType>
+			<Modifier>0</Modifier>
+			<Attack>200</Attack>
+			<Defense>0</Defense>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_FLAGSHIP_LOCKING</PromotionType>
+			<OtherPromotionType>PROMOTION_UNIT_HORNET_MARK</OtherPromotionType>
+			<Modifier>0</Modifier>
+			<Attack>100</Attack>
+			<Defense>0</Defense>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_FLAGSHIP_LOCKING</PromotionType>
+			<OtherPromotionType>PROMOTION_CARGO_IV_TAIHO</OtherPromotionType>
+			<Modifier>0</Modifier>
+			<Attack>50</Attack>
+			<Defense>0</Defense>
+		</Row>
+		
+		<!--穿甲弹-->
+		<Row>
+			<PromotionType>PROMOTION_BATTLESHIP_ARMOUR_PIERCING_PROJECTILE</PromotionType>
+			<OtherPromotionType>PROMOTION_CITADEL_DEFENSE</OtherPromotionType>
+			<Modifier>0</Modifier>
+			<Attack>100</Attack>
+			<Defense>0</Defense>
+		</Row>
+		
+		<!--雷击战术-->
+		<Row>
+			<PromotionType>PROMOTION_DESTROYER_LIGHTNING_STRIKE_TACTICS</PromotionType>
+			<OtherPromotionType>PROMOTION_NAVAL_CAPITAL_SHIP</OtherPromotionType>
+			<Modifier>0</Modifier>
+			<Attack>100</Attack>
+			<Defense>0</Defense>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_DESTROYER_LIGHTNING_STRIKE_TACTICS</PromotionType>
+			<OtherPromotionType>PROMOTION_NAVAL_RANGED_SHIP</OtherPromotionType>
+			<Modifier>0</Modifier>
+			<Attack>100</Attack>
+			<Defense>0</Defense>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_DESTROYER_LIGHTNING_STRIKE_TACTICS</PromotionType>
+			<OtherPromotionType>PROMOTION_NAVAL_RANGED_CRUISER</OtherPromotionType>
+			<Modifier>0</Modifier>
+			<Attack>100</Attack>
+			<Defense>0</Defense>
+		</Row>
+
+		<!--饱和打击一级-->
+		<Row>
+			<PromotionType>PROMOTION_SATURATION_STRIKE_1</PromotionType>
+			<OtherPromotionType>PROMOTION_CORPS_1</OtherPromotionType>
+			<Modifier>0</Modifier>
+			<Attack>20</Attack>
+			<Defense>0</Defense>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_SATURATION_STRIKE_1</PromotionType>
+			<OtherPromotionType>PROMOTION_CORPS_2</OtherPromotionType>
+			<Modifier>0</Modifier>
+			<Attack>20</Attack>
+			<Defense>0</Defense>
+		</Row>
+		<!--饱和打击二级-->
+		<Row>
+			<PromotionType>PROMOTION_SATURATION_STRIKE_2</PromotionType>
+			<OtherPromotionType>PROMOTION_CORPS_1</OtherPromotionType>
+			<Modifier>0</Modifier>
+			<Attack>20</Attack>
+			<Defense>0</Defense>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_SATURATION_STRIKE_2</PromotionType>
+			<OtherPromotionType>PROMOTION_CORPS_2</OtherPromotionType>
+			<Modifier>0</Modifier>
+			<Attack>20</Attack>
+			<Defense>0</Defense>
+		</Row>
+
+		<!--破坏射击-->
+		<Row>
+			<PromotionType>PROMOTION_CANNON_DAMAGE_SHOT</PromotionType>
+			<OtherPromotionType>PROMOTION_CITADEL_DEFENSE</OtherPromotionType>
+			<Modifier>0</Modifier>
+			<Attack>100</Attack>
+			<Defense>0</Defense>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_CANNON_DAMAGE_SHOT</PromotionType>
+			<OtherPromotionType>PROMOTION_FORT_DESTRUCTION_OF_WORKS</OtherPromotionType>
+			<Modifier>0</Modifier>
+			<Attack>50</Attack>
+			<Defense>0</Defense>
+		</Row>
+
+		<!--潜艇晋升对海军近战-->
+		<Row>
+			<PromotionType>PROMOTION_SUBMARINE_COMBAT</PromotionType>
+			<OtherPromotionType>PROMOTION_NAVALMELEE_COMBAT</OtherPromotionType>
+			<Modifier>100</Modifier>
+			<Attack>300</Attack>
+			<Defense>0</Defense>
+		</Row>
+		
+	</UnitPromotions_PromotionModifiers>
+  
+</GameData>

@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 12/31/2022 11:35:50 AM -->
+<GameData>
+	<UnitPromotions>
+		<!--给战略轰炸机添加获取经验速率+100%-->
+		<Update>
+			<Where Type="PROMOTION_STRATEGIC_BOMBER"/>
+			<Set ExperiencePercent="100"/>
+		</Update>
+
+		<!--覆盖轰炸-->
+		<Row>
+			<Type>PROMOTION_EXP_COVER_BOMBING</Type>
+			<Description>TXT_KEY_PROMOTION_EXP_COVER_BOMBING</Description>
+			<Help>TXT_KEY_PROMOTION_EXP_COVER_BOMBING_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>30</PortraitIndex>
+			<IconAtlas>QY_EXPROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_AIR</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_EXP_COVER_BOMBING</PediaEntry>
+			<!--前置攻坚二级-->
+			<PromotionPrereqOr1>PROMOTION_AIR_SIEGE_2</PromotionPrereqOr1>
+		</Row>
+
+		<!--海空神剑-->
+		<Row>
+			<Type>PROMOTION_AIR_EXCALIBUR</Type>
+			<Description>TXT_KEY_PROMOTION_AIR_EXCALIBUR</Description>
+			<Help>TXT_KEY_PROMOTION_AIR_EXCALIBUR_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>26</PortraitIndex>
+			<IconAtlas>QY_EXPROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_AIR</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_AIR_EXCALIBUR</PediaEntry>
+			<!--前置攻击机-->
+			<PromotionPrereqOr1>PROMOTION_AIR_ATTACK</PromotionPrereqOr1>
+			<CollateralDamagePercent>50</CollateralDamagePercent>
+			<CollateralDamagePlotUnitLimit>2</CollateralDamagePlotUnitLimit>
+			<WarCasualtiesModifier>-100</WarCasualtiesModifier>
+		</Row>
+		<!--向死而生-->
+		<Row>
+			<Type>PROMOTION_AIR_TO_DIE_AND_LIVE</Type>
+			<Description>TXT_KEY_PROMOTION_AIR_TO_DIE_AND_LIVE</Description>
+			<Help>TXT_KEY_PROMOTION_AIR_TO_DIE_AND_LIVE_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>39</PortraitIndex>
+			<IconAtlas>QY_EXPROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_AIR</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_AIR_TO_DIE_AND_LIVE</PediaEntry>
+			<CurrentHitPointAttackMod>1</CurrentHitPointAttackMod>
+			<ChangeDamageValue>-5</ChangeDamageValue>
+			<!--前置海空神剑-->
+			<PromotionPrereqOr1>PROMOTION_AIR_EXCALIBUR</PromotionPrereqOr1>
+			<MaxHitPointsModifier>100</MaxHitPointsModifier>
+		</Row>
+	</UnitPromotions>
+		
+	<UnitPromotions_UnitCombats>
+		<!--覆盖轰炸-->
+		<Row>
+			<PromotionType>PROMOTION_EXP_COVER_BOMBING</PromotionType>
+			<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+		</Row>
+		<!--海空神剑-->
+		<Row>
+			<PromotionType>PROMOTION_AIR_EXCALIBUR</PromotionType>
+			<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+		</Row>
+		<!--向死而生-->
+		<Row>
+			<PromotionType>PROMOTION_AIR_TO_DIE_AND_LIVE</PromotionType>
+			<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+		</Row>
+	</UnitPromotions_UnitCombats>
+
+</GameData>

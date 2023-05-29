@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 12/17/2022 7:26:45 PM -->
+<GameData>
+	<Language_zh_CN>
+		<!--晋升文本-->
+		<Row Tag="TXT_KEY_PROMOTION_FLAGSHIP_LOCKING">
+			<Text>旗舰锁定</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_FLAGSHIP_LOCKING_HELP">
+			<Text>攻击[COLOR_POSITIVE_TEXT]旗舰海军[ENDCOLOR]，[COLOR_POSITIVE_TEXT]航空母舰[ENDCOLOR]+100%[ICON_STRENGTH]战斗力</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_FLAGSHIP_LOCKING_PRE_1">
+			<Text>旗舰战绩★</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_FLAGSHIP_LOCKING_PRE_1_HELP">
+			<Text>累计攻击1次[COLOR_POSITIVE_TEXT]旗舰海军[ENDCOLOR]或[COLOR_POSITIVE_TEXT]航空母舰[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_FLAGSHIP_LOCKING_PRE_2">
+			<Text>旗舰战绩★★</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_FLAGSHIP_LOCKING_PRE_2_HELP">
+			<Text>累计攻击1次[COLOR_POSITIVE_TEXT]旗舰海军[ENDCOLOR]或[COLOR_POSITIVE_TEXT]航空母舰[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_FLAGSHIP_LOCKING_PRE_3">
+			<Text>旗舰战绩★★★</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_FLAGSHIP_LOCKING_PRE_3_HELP">
+			<Text>累计攻击1次[COLOR_POSITIVE_TEXT]旗舰海军[ENDCOLOR]或[COLOR_POSITIVE_TEXT]航空母舰[ENDCOLOR]</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_SHIPBORNE_GUN_SALVO">
+			<Text>舰炮齐射</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_SHIPBORNE_GUN_SALVO_HELP">
+			<Text>攻击时，以被攻击地块为中心，对与该中心距离一格的至多一个敌人造成50%的溅射伤害。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_SHIPBORNE_GUN_SALVO_2">
+			<Text>齐射强化</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_SHIPBORNE_GUN_SALVO_2_HELP">
+			<Text>舰炮齐射对目标地块一环内的溅射伤害+50%。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_FLIGHT_DECK_EXPAND_1">
+			<Text>舰岛后置</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_FLIGHT_DECK_EXPAND_1_HELP">
+			<Text>额外的1个载机位</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_FLIGHT_DECK_EXPAND_2">
+			<Text>斜角甲板</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_FLIGHT_DECK_EXPAND_2_HELP">
+			<Text>载机位加1</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_FLIGHT_DECK_EXPAND_3">
+			<Text>弹射起飞</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_FLIGHT_DECK_EXPAND_3_HELP">
+			<Text>载机位再加1</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_MESSAGE_PROMOTION_FLAGSHIP_LOCKING_ALERT">
+			<Text>经过战斗磨砺，我方{1_name}获得了[COLOR_POSITIVE_TEXT]旗舰锁定[ENDCOLOR]的能力</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MESSAGE_PROMOTION_FLAGSHIP_LOCKING_ALERT_2">
+			<Text>我方{1_name}击沉了对方舰队的[COLOR_POSITIVE_TEXT]核心[ENDCOLOR]！获得[COLOR_POSITIVE_TEXT]旗舰锁定[ENDCOLOR]的能力</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_MESSAGE_PROMOTION_SHIPBORNE_GUN_SALVO_ALERT">
+			<Text>经过战斗磨砺，我方{1_name}获得了[COLOR_POSITIVE_TEXT]舰炮齐射[ENDCOLOR]的能力</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_UNIT_ELITE_BATTLECRUISER_MARK">
+			<Text>俾斯麦号</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_UNIT_HORNET_MARK">
+			<Text>大黄蜂号</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_BATTLESHIP_ARMOUR_PIERCING_PROJECTILE">
+			<Text>穿甲弹</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_BATTLESHIP_ARMOUR_PIERCING_PROJECTILE_HELP">
+			<Text>攻击[COLOR_POSITIVE_TEXT]固定炮台[ENDCOLOR]+100%[ICON_STRENGTH]战斗力。</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_BATTLESHIP_SECONDARY_GUN">
+			<Text>舰载副炮</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_BATTLESHIP_SECONDARY_GUN_HELP">
+			<Text>对空袭+20%[ICON_STRENGTH]战斗力,概率对攻击自己的海面[COLOR_POSITIVE_TEXT]游猎单位[ENDCOLOR]进行反击。。</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_DESTROYER_MAIN_GUN_REINFORCEMENT">
+			<Text>主炮强化</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_DESTROYER_MAIN_GUN_REINFORCEMENT_HELP">
+			<Text>进攻时+33%[ICON_STRENGTH]战斗力</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_DESTROYER_LIGHTNING_STRIKE_TACTICS">
+			<Text>雷击战术</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_DESTROYER_LIGHTNING_STRIKE_TACTICS_HELP">
+			<Text>攻击[COLOR_POSITIVE_TEXT]旗舰单位[ENDCOLOR]以及[COLOR_POSITIVE_TEXT]海军远程[ENDCOLOR]+100%[ICON_STRENGTH]战斗力</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_GAIN_EXPERIENCE_2">
+			<Text>战术积累</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_GAIN_EXPERIENCE_2_HELP">
+			<Text>单位通过战斗获得经验+150%。</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_MESSAGE_PROMOTION_BATTLESHIP_SECONDARY_GUN_ALERT_1">
+			<Text>由于敌方{1_name}[COLOR_POSITIVE_TEXT]舰载副炮[ENDCOLOR]的作用，你的{2_name}受到了{3_name}点反击伤害</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MESSAGE_PROMOTION_BATTLESHIP_SECONDARY_GUN_ALERT_2">
+			<Text>在防御中，由于你的{1_name}[COLOR_POSITIVE_TEXT]舰载副炮[ENDCOLOR]的作用，敌方{2_name}受到了{3_name}点反击伤害</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_SPARTAN300_FIGHT_TO_THE_END">
+			<Text>血战到底</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_SPARTAN300_FIGHT_TO_THE_END_HELP">
+			<Text>
+				战斗时受到的最终伤害减少5点。
+				[NEWLINE]受到近战攻击时,若进攻方不为重骑兵/装甲单位，其额外受到10点反击伤害。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MESSAGE_PROMOTION_SPARTAN300_FIGHT_TO_THE_END_1">
+			<Text>由于敌方{1_name}的[COLOR_POSITIVE_TEXT]猛烈反击[ENDCOLOR]，你的{2_name}失去所有移动力。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MESSAGE_PROMOTION_SPARTAN300_FIGHT_TO_THE_END_2">
+			<Text>由于你的{1_name}的[COLOR_POSITIVE_TEXT]猛烈反击[ENDCOLOR]，敌方{2_name}失去所有移动力。</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_SATURATION_STRIKE_1">
+			<Text>饱和打击一级</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_SATURATION_STRIKE_1_HELP">
+			<Text>攻击军团和集团军+20%[ICON_STRENGTH]战斗力(可叠加)[NEWLINE]攻击军团固定增加10点伤害</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_SATURATION_STRIKE_2">
+			<Text>饱和打击二级</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_SATURATION_STRIKE_2_HELP">
+			<Text>攻击军团和集团军+20%[ICON_STRENGTH]战斗力(可叠加)攻击集团军固定增加10点伤害</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_CANNON_DAMAGE_SHOT">
+			<Text>破坏射击</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_CANNON_DAMAGE_SHOT_HELP">
+			<Text>攻击[COLOR_POSITIVE_TEXT]固定炮台[ENDCOLOR]+100%[ICON_STRENGTH]战斗力。[NEWLINE]有概率使敌方[COLOR_POSITIVE_TEXT]固定炮台[ENDCOLOR][COLOR_NEGATIVE_TEXT]工事毁坏[ENDCOLOR]，攻击工事被[COLOR_NEGATIVE_TEXT]破坏[ENDCOLOR]的[COLOR_POSITIVE_TEXT]固定炮台[ENDCOLOR]+50%[ICON_STRENGTH]战斗力。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_FORT_DESTRUCTION_OF_WORKS">
+			<Text>[COLOR_NEGATIVE_TEXT]工事毁坏[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_FORT_DESTRUCTION_OF_WORKS_HELP">
+			<Text>[ICON_STRENGTH][COLOR_NEGATIVE_TEXT]战斗力[ENDCOLOR]-50%,[ICON_RANGE_STRENGTH][COLOR_NEGATIVE_TEXT]射程[ENDCOLOR]-1，单位攻击一次后此状态消失。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MESSAGE_PROMOTION_CANNON_DAMAGE_SHOT_1">
+			<Text>由于你的{1_name}的[COLOR_POSITIVE_TEXT]破坏射击[ENDCOLOR]，敌方{2_name}的防御工事被毁坏了。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MESSAGE_PROMOTION_CANNON_DAMAGE_SHOT_2">
+			<Text>由于敌方{1_name}的[COLOR_POSITIVE_TEXT]破坏射击[ENDCOLOR]，你的{2_name}的防御工事被毁坏了。</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_EXP_COVER_BOMBING">
+			<Text>覆盖轰炸</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_EXP_COVER_BOMBING_HELP">
+			<Text>攻击敌方城市额外附加城市最大血量15%的伤害</Text>
+		</Row>
+		
+		<Row Tag="TXT_KEY_PROMOTION_AIR_EXCALIBUR">
+			<Text>天空神剑</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_AIR_EXCALIBUR_HELP">
+			<Text>
+				攻击敌军时对同地格至多2个敌军造成50%的穿透伤害
+				[NEWLINE]对[COLOR_POSITIVE_TEXT]地面[ENDCOLOR]和[COLOR_POSITIVE_TEXT]海面[ENDCOLOR]单位+50%[ICON_STRENGTH]攻击力
+				[NEWLINE]若在攻击时死亡，立即复活(仅限一次)，同时获得晋升[COLOR_POSITIVE_TEXT]向死而生[ENDCOLOR]
+			</Text>
+		</Row>
+		
+		<Row Tag="TXT_KEY_PROMOTION_AIR_TO_DIE_AND_LIVE">
+			<Text>向死而生</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_AIR_TO_DIE_AND_LIVE_HELP">
+			<Text>血量上限+100点,战斗时受到的最终伤害减少5点，每损失一点HP+1%[ICON_STRENGTH]战斗力(上限100)</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MESSAGE_PROMOTION_AIR_TO_DIE_AND_LIVE">
+			<Text>你的{1_name}在残酷的战斗中存活了下来，获得[COLOR_POSITIVE_TEXT]向死而生[ENDCOLOR]晋升。</Text>
+		</Row>
+		
+
+		<Row Tag="TXT_KEY_PROMOTION_EXP_ADAPT_1">
+			<Text>适应一级——固守</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_EXP_ADAPT_1_HELP">
+			<Text>受到攻击时[ICON_STRENGTH]战斗力+50%，恢复时生命值+15</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_EXP_ADAPT_2">
+			<Text>适应二级——强体</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_EXP_ADAPT_2_HELP">
+			<Text>血量上限+50点，经验获取速率+100%</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_EXP_ADAPT_3">
+			<Text>适应三级——猛击</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_EXP_ADAPT_3_HELP">
+			<Text>[ICON_STRENGTH]战斗力+33%，对受伤单位加成+50%，攻击敌军使其失去一半的[ICON_MOVES]移动力</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_EXP_ADAPT_3_ALERT">
+			<Text>敌方{1_name}在你的{2_name}的[COLOR_POSITIVE_TEXT]猛烈攻击下[ENDCOLOR]惊慌失措，失去{3_name}点[ICON_MOVES]移动力</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_EXP_ADAPT_4">
+			<Text>精通强化</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_EXP_ADAPT_4_HELP">
+			<Text>击败敌方[COLOR_POSITIVE_TEXT]精英单位[ENDCOLOR]后，若你未拥有此单位，分出一支小队使用敌方装备武装自己(生成一个新单位)</Text>
+		</Row>
+
+		<Replace Tag="TXT_KEY_PROMOTION_SP_FORCE_3" >
+			<Text>技能三级——精通</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_SP_FORCE_3_HELP" >
+			<Text>击败敌方非精英单位后概率分出一支小队，使用敌方装备武装自己(生成一个新单位)。[NEWLINE]境外作战+33%[ICON_STRENGTH]战斗力</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_PROMOTION_STRATEGIC_BOMBER_HELP" >
+			<Text>
+				能对[COLOR_POSITIVE_TEXT]城市和固定炮台[ENDCOLOR]造成巨大伤害，被[COLOR_NEGATIVE_TEXT]战斗机[ENDCOLOR]单位克制。
+				[NEWLINE]不能攻击隐形单位。
+				[NEWLINE]不能转场到航空母舰上。
+				[NEWLINE]经验获取速率+100%
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_NAVAL_CAPITAL_SHIP_HELP" >
+			<Text>
+				同时代[ICON_STRENGTH]战斗力最强的单位。
+				[NEWLINE]攻击目标时对临近单位造成50%伤害。
+				[NEWLINE]进攻[COLOR_POSITIVE_TEXT]军事要塞固定炮台[ENDCOLOR]+350%[ICON_STRENGTH]战斗力。
+				[NEWLINE]被[COLOR_NEGATIVE_TEXT]空军[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]潜艇[ENDCOLOR]单位克制。
+				[NEWLINE]经验获取速率+100%
+			</Text>
+		</Replace>
+
+	</Language_zh_CN>
+</GameData>
