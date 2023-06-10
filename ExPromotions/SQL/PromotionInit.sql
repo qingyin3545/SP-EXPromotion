@@ -60,7 +60,7 @@ WHERE Tag = 'TXT_KEY_PROMOTION_NUMIDIAN_MARCH_HELP';
 INSERT OR REPLACE INTO IconFontTextures(IconFontTexture,IconFontTextureFile)
 SELECT 'ICON_FONT_TEXTURE_QY_EXPROMOTION','QYPromotionFontIcons';
 
-INSERT OR REPLACE INTO IconFontMapping(IconName,IconFontTexture,IconMapping) 
+/*INSERT OR REPLACE INTO IconFontMapping(IconName,IconFontTexture,IconMapping) 
 SELECT 'ICON_PROMOTION_QY_EXPROMOTION_' || CAST(PortraitIndex+1 AS TEXT),'ICON_FONT_TEXTURE_QY_EXPROMOTION',PortraitIndex+1 
 FROM UnitPromotions WHERE IconAtlas = 'QY_EXPROMOTION_ATLAS';
 
@@ -70,7 +70,7 @@ WHEN NEW.IconAtlas = 'QY_EXPROMOTION_ATLAS'
 BEGIN
     INSERT OR REPLACE INTO IconFontMapping(IconName,IconFontTexture,IconMapping) 
     SELECT 'ICON_PROMOTION_QY_EXPROMOTION_' || CAST(NEW.PortraitIndex+1 AS TEXT),'ICON_FONT_TEXTURE_QY_EXPROMOTION',NEW.PortraitIndex+1;
-END;
+END;*/
 
 --世界强权兼容
 CREATE TABLE IF NOT EXISTS ROG_GlobalUserSettings (Type text default null, Value integer default 0);
