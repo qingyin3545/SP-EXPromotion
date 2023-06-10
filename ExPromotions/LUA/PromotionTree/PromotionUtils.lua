@@ -83,14 +83,20 @@ function GetBasicPromotions(sCombatClass,sBasePromotion)
     local sQuery =
         "SELECT p.Type FROM UnitPromotions p, UnitPromotions_UnitCombats c WHERE c.UnitCombatType = ("
         ..sPrereqs1..
-        ") AND c.PromotionType = p.Type AND NOT p.CannotBeChosen AND p.Type != 'PROMOTION_INSTA_HEAL' AND (p.PromotionPrereqOr1 IS NULL OR p.PromotionPrereqOr1 =("..sPrereqs2..") OR p.PromotionPrereqOr2 =("..sPrereqs2..") OR p.PromotionPrereqOr3 =("..sPrereqs2..") OR p.PromotionPrereqOr4 =("..sPrereqs2..") OR p.PromotionPrereqOr5 =("..sPrereqs2..") OR p.PromotionPrereqOr6 =("..sPrereqs2..") OR p.PromotionPrereqOr7 =("..sPrereqs2..") OR p.PromotionPrereqOr8 =("..sPrereqs2..") OR p.PromotionPrereqOr9 =("..sPrereqs2.."))"
+        ") AND c.PromotionType = p.Type AND NOT p.CannotBeChosen AND (p.PromotionPrereqOr1 IS NULL OR p.PromotionPrereqOr1 =("..sPrereqs2..") OR p.PromotionPrereqOr2 =("..sPrereqs2..") OR p.PromotionPrereqOr3 =("..sPrereqs2..") OR p.PromotionPrereqOr4 =("..sPrereqs2..") OR p.PromotionPrereqOr5 =("..sPrereqs2..") OR p.PromotionPrereqOr6 =("..sPrereqs2..") OR p.PromotionPrereqOr7 =("..sPrereqs2..") OR p.PromotionPrereqOr8 =("..sPrereqs2..") OR p.PromotionPrereqOr9 =("..sPrereqs2.."))"
     for row in DB.Query(sQuery) do
         --屏蔽武僧相关晋升
         if row.Type:match("PROMOTION_FIST_[0-9]+$") == nil 
-        and row.Type:match("PROMOTION_[A-Z]+_EXTRA") == nil 
+        and row.Type:match("PROMOTION_[A-Z]+_EXTRA") == nil
+        --屏蔽立即恢复
+        and row.Type ~= "PROMOTION_INSTA_HEAL"
+        --屏蔽装甲一级
+        and row.Type ~= "PROMOTION_ARMOR_7"
+        --屏蔽王国冠军
+        and row.Type ~= "PROMOTION_SPUE_KNIGHT_NEW_C"
         then
             table.insert(promotions, row.Type)
-        end    
+        end
         
     end
 

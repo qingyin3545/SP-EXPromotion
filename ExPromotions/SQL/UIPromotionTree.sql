@@ -131,8 +131,8 @@ UPDATE UnitPromotions SET PromotionPrereqOr2 = 'PROMOTION_TANK_COMBAT' WHERE Typ
 AND EXISTS (SELECT * FROM ROG_GlobalUserSettings WHERE Type= 'WORLD_POWER_PATCH' AND Value = 1);
 
 --装甲单位和机甲晋升线整合:攻坚-->装甲1级->装甲2级
-UPDATE UnitPromotions SET PromotionPrereqOr1 = 'PROMOTION_SIEGE6' WHERE Type = 'PROMOTION_ARMOR_7'
-AND EXISTS (SELECT * FROM ROG_GlobalUserSettings WHERE Type= 'WORLD_POWER_PATCH' AND Value = 1);
+--UPDATE UnitPromotions SET PromotionPrereqOr1 = 'PROMOTION_SIEGE6' WHERE Type = 'PROMOTION_ARMOR_7'
+--AND EXISTS (SELECT * FROM ROG_GlobalUserSettings WHERE Type= 'WORLD_POWER_PATCH' AND Value = 1);
 
 --装甲单位和机甲晋升线整合:操练1级->操练2级->操练3级-->修理能力
 UPDATE UnitPromotions SET PromotionPrereqOr1 = 'PROMOTION_HEAVY_DRILL_3' WHERE Type = 'PROMOTION_REPAIR'
