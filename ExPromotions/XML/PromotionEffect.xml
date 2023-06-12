@@ -155,9 +155,8 @@
 		<Row>
 			<PromotionType>PROMOTION_SUBMARINE_COMBAT</PromotionType>
 			<OtherPromotionType>PROMOTION_NAVALMELEE_COMBAT</OtherPromotionType>
-			<Modifier>100</Modifier>
-			<Attack>300</Attack>
-			<Defense>0</Defense>
+			<Attack>125</Attack>
+			<Defense>50</Defense>
 		</Row>
 		
 	</UnitPromotions_PromotionModifiers>

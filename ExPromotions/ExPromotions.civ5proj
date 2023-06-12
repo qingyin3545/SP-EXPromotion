@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
     <ProjectGuid>{22ba6d87-bfff-4432-aaa4-71bf003d6ec4}</ProjectGuid>
-    <Name>ExPromotions</Name>
+    <Name>晋升拓展-晋升树</Name>
     <Guid>d099f2a6-209a-4753-ad81-353e061c4250</Guid>
     <ModVersion>4</ModVersion>
     <Stability>Alpha</Stability>
@@ -18,8 +18,8 @@
     <SupportsMultiplayer>true</SupportsMultiplayer>
     <SupportsHotSeat>true</SupportsHotSeat>
     <SupportsMac>true</SupportsMac>
-    <AssemblyName>ExPromotions</AssemblyName>
-    <RootNamespace>ExPromotions</RootNamespace>
+    <AssemblyName>晋升拓展-晋升树</AssemblyName>
+    <RootNamespace>晋升拓展-晋升树</RootNamespace>
     <ModReferences>
       <Association>
         <Type>Mod</Type>

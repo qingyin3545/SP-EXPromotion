@@ -2,11 +2,6 @@
 <!-- Created by ModBuddy on 12/17/2022 7:05:32 PM -->
 <GameData>
 	<UnitPromotions>
-		<!--给旗舰单位添加获取经验速率+100%-->
-		<Update>
-			<Where Type="PROMOTION_NAVAL_CAPITAL_SHIP"/>
-			<Set ExperiencePercent="100"/>
-		</Update>
 		<!--旗舰锁定-->
 		<Row>
 			<Type>PROMOTION_FLAGSHIP_LOCKING</Type>

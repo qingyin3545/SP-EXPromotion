@@ -245,15 +245,5 @@
 				[NEWLINE]经验获取速率+100%
 			</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_NAVAL_CAPITAL_SHIP_HELP" >
-			<Text>
-				同时代[ICON_STRENGTH]战斗力最强的单位。
-				[NEWLINE]攻击目标时对临近单位造成50%伤害。
-				[NEWLINE]进攻[COLOR_POSITIVE_TEXT]军事要塞固定炮台[ENDCOLOR]+350%[ICON_STRENGTH]战斗力。
-				[NEWLINE]被[COLOR_NEGATIVE_TEXT]空军[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]潜艇[ENDCOLOR]单位克制。
-				[NEWLINE]经验获取速率+100%
-			</Text>
-		</Replace>
-
 	</Language_zh_CN>
 </GameData>
