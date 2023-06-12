@@ -25,7 +25,7 @@
         <Type>Mod</Type>
         <Name>Super Power - Remaking of World Order</Name>
         <Id>f9b9c8aa-b6d1-4188-9239-c1de2207ab7c</Id>
-        <MinVersion>7</MinVersion>
+        <MinVersion>9</MinVersion>
         <MaxVersion>999</MaxVersion>
       </Association>
       <Association>
@@ -105,14 +105,21 @@
         <Type>Mod</Type>
         <Name>Super Power - Remaking of World Order</Name>
         <Id>f9b9c8aa-b6d1-4188-9239-c1de2207ab7c</Id>
-        <MinVersion>7</MinVersion>
+        <MinVersion>9</MinVersion>
         <MaxVersion>999</MaxVersion>
       </Association>
       <Association>
         <Type>Mod</Type>
         <Name>(1) CIV5MPDLL</Name>
         <Id>a2969a0a-e4da-41cc-9e0b-19b29aa971d8</Id>
-        <MinVersion>2</MinVersion>
+        <MinVersion>6</MinVersion>
+        <MaxVersion>999</MaxVersion>
+      </Association>
+      <Association>
+        <Type>Mod</Type>
+        <Name>世界强权</Name>
+        <Id>41450919-c52c-406f-8752-5ea34be32b2d</Id>
+        <MinVersion>0</MinVersion>
         <MaxVersion>999</MaxVersion>
       </Association>
     </ModDependencies>
