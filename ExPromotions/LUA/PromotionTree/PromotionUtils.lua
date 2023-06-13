@@ -91,8 +91,6 @@ function GetBasicPromotions(sCombatClass,sBasePromotion)
         and row.Type:match("PROMOTION_[A-Z]+_EXTRA") == nil
         --屏蔽立即恢复
         and row.Type ~= "PROMOTION_INSTA_HEAL"
-        --屏蔽装甲一级
-        and row.Type ~= "PROMOTION_ARMOR_7"
         --屏蔽王国冠军
         and row.Type ~= "PROMOTION_SPUE_KNIGHT_NEW_C"
         then
@@ -114,13 +112,20 @@ function GetBasicPromotions(sCombatClass,sBasePromotion)
     return promotions
 end
 
-function GetBasePromotions(sCombatClass,sBasePromotion) 
+function GetBasePromotions(sCombatClass,sBasePromotion,showAllPromotion) 
     local promotions = {}
 
     for _, sPromotion in ipairs(GetBasicPromotions(sCombatClass,sBasePromotion)) do
-        table.insert(promotions, GetPromotionChain(sPromotion, sCombatClass))
+        --如果显示更多晋升线，屏蔽一些晋升
+        --屏蔽装甲一级
+        if showAllPromotion
+        and sPromotion == "PROMOTION_ARMOR_7" 
+        then
+            --print("屏蔽晋升",sPromotion)
+        else
+            table.insert(promotions,GetPromotionChain(sPromotion, sCombatClass))
+        end
     end
-
     return promotions
 end
 

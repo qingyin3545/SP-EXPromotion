@@ -157,7 +157,7 @@ function PlacePromotions(pUnit, sCombatClass, iBaseX, iBaseY, sBasePromotion, ba
     local iWidth = iButtonSizeX + 3 * iPipeSizeX
     AdjustBaseGroupWidth(iWidth)
 
-    basePromotions = GetBasePromotions(sCombatClass, sBasePromotion)
+    basePromotions = GetBasePromotions(sCombatClass, sBasePromotion, showAllPromotion)
 
     local promotionIndex = #basePromotions - baseIndex + 1
     if promotionIndex < 0 then
@@ -166,10 +166,12 @@ function PlacePromotions(pUnit, sCombatClass, iBaseX, iBaseY, sBasePromotion, ba
 	--如果晋升线只有两条,不用显示选页UI
 	if(#basePromotions < 3) then
 		Controls.ChooseBox:SetHide(true)
-	end
 	--如果晋升线不足5条，不用显示第三个按钮
-	if(#basePromotions < 5) then
+    elseif(#basePromotions < 5) then
 		Controls.ChooseBoxRight:SetHide(true)
+    --没有显示多晋升线，总晋升线又多于5，显示第三个按钮
+    elseif(not showAllPromotion) then
+        Controls.ChooseBoxRight:SetHide(false)
 	end
 
     if (basePromotions and promotionIndex > 0) then
