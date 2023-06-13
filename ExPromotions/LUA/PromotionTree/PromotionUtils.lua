@@ -139,7 +139,7 @@ function GetDependentPromotions(sCombatClass, sPromotion)
     sQuery =
         "SELECT p2.Type FROM UnitPromotions p1, UnitPromotions p2, UnitPromotions_UnitCombats c WHERE p1.Type = ? AND (" 
         .. sPrereqs ..
-        ") AND p2.Type = c.PromotionType AND c.UnitCombatType = ? AND p2.Type NOT LIKE ?"
+        ") AND p2.Type = c.PromotionType AND c.UnitCombatType = ? AND p2.Type NOT LIKE ? AND NOT EXISTS (SELECT * FROM SpecialRulePromotion WHERE SpecialPromotion = p2.Type)"
     for row in DB.Query(sQuery, sPromotion, sCombatClass, sBase .. "%") do
         table.insert(promotions,GetPromotionChain(row.Type, sCombatClass))
     end
