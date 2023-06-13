@@ -6,7 +6,7 @@ local m_ButtonManager = nil
 local iButtonIconSize = nil
 
 function ButtonManagerInit(sInstanceName, rootControl, parentControl)
-  print(string.format("ButtonManagerInit(%s)", sInstanceName))
+  --print(string.format("ButtonManagerInit(%s)", sInstanceName))
 
   m_ButtonManager = InstanceManager:new(sInstanceName, rootControl, parentControl)
 
@@ -20,7 +20,7 @@ function ButtonManagerInit(sInstanceName, rootControl, parentControl)
 end
 
 function ButtonManagerReset()
-  print("ButtonManagerReset()")
+  --print("ButtonManagerReset()")
 
   if (m_ButtonManager ~= nil) then
     m_ButtonManager:ResetInstances()

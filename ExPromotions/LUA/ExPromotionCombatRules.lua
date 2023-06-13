@@ -176,7 +176,7 @@ function QYBattleJoined(iPlayer, iUnitOrCity, iRole, bIsCity)
 		g_DoQYBattle.defUnitID = iUnitOrCity;
 		g_DoQYBattle.defODamage = pPlayer:GetUnitByID(iUnitOrCity):GetDamage();
 	end
-	print("加入战斗.")
+	--print("加入战斗.")
 
 end
 GameEvents.BattleJoined.Add(QYBattleJoined)
@@ -231,7 +231,7 @@ function QYBattleEffect()
 	if not attPlayer:IsHuman() and not defPlayer:IsHuman() then
 		return;
 	end
-	print("战斗结束.")
+	--print("战斗结束.")
 
 	--攻击机攻击时受损70+并存活赋予海空神剑
 	if attUnit and not attUnit:IsDead()

@@ -249,7 +249,7 @@ function PlaceThirdPromotionDependents(pUnit, sCombatClass, basePromotions, iBas
         PlaceTwinPromoLine(pUnit, sCombatClass, basePromotions[2], iBaseX + iPipeSizeX, iBaseY + (iPipeSizeY / 2), 1)
     end
     if (#basePromotions > 2) then
-        print("Cannot place more than 2 dependent promotion lines for the third base line!")
+        --print("Cannot place more than 2 dependent promotion lines for the third base line!")
     end
 end
 
@@ -347,8 +347,7 @@ function PlaceMidLineDependencies(pUnit, sCombatClass, line3Chains, line4Chains,
             PlaceStraightPromoLine(pUnit, sCombatClass, line3Chains[1], iBaseXUpper + lLDDistance, iBaseYUpper, false)
         end
     else
-        print(
-            "The third and fourth promotion lines of the Promotion Tree cannot handle any branching beyond the height of their 2 rows.")
+        --print("The third and fourth promotion lines of the Promotion Tree cannot handle any branching beyond the height of their 2 rows.")
     end
 
     if (#line4Chains == 0) then
@@ -380,7 +379,7 @@ function PlaceMidLineDependencies(pUnit, sCombatClass, line3Chains, line4Chains,
             return true
         end
         if (noMoreSpace) then
-            print("There was only enough space to draw the 3rd promotion line dependents.")
+            --print("There was only enough space to draw the 3rd promotion line dependents.")
             return true
         elseif (crossConnections == 1) then -- line 4 has 2 dependent promo lines, only one of which is intertwined with the one promo line of line 3
             if (line3Chains[1][1] == line4Chains[1][1]) then
@@ -393,9 +392,7 @@ function PlaceMidLineDependencies(pUnit, sCombatClass, line3Chains, line4Chains,
         elseif (#line4Chains == 1) then -- no cross-connections
             PlaceStraightPromoLine(pUnit, sCombatClass, line4Chains[1], iBaseXLower, iBaseYLower, false)
         elseif (#line3Chains == 1) then -- line 4 has 2 midline, dependent promo lines and line 3 has 1, but they are not intertwined, so the second dependent line of line 4 needs to be dropped
-            print(string.format(
-                "Need to drop midline dependent promo line due to lack of space; promo line dropped starts with promotion %s",
-                line4Chains[2][1]))
+            --print(string.format("Need to drop midline dependent promo line due to lack of space; promo line dropped starts with promotion %s",line4Chains[2][1]))
             PlaceStraightPromoLine(pUnit, sCombatClass, line4Chains[1], iBaseXLower, iBaseYLower, false)
         else -- line 4 has 2 midline, dependent promo lines and line 3 has none
             PlaceStraightPromoLine(pUnit, sCombatClass, line4Chains[1], iBaseXLower + lLDDistance, iBaseYLower, false)
@@ -408,8 +405,7 @@ function PlaceMidLineDependencies(pUnit, sCombatClass, line3Chains, line4Chains,
             PlaceStraightPromoLine(pUnit, sCombatClass, line4Chains[2], iBaseXLower + lLDDistance, iBaseYUpper, true)
         end
     else
-        print(
-            "The third and fourth promotion lines of the Promotion Tree cannot handle any branching beyond the height of their 2 rows combined.")
+        --print("The third and fourth promotion lines of the Promotion Tree cannot handle any branching beyond the height of their 2 rows combined.")
     end
 end
 
@@ -643,7 +639,7 @@ end
 --
 
 function DrawPromotionDropDown(iX, iY)
-    print(string.format("Place dropdown menu at (%i, %i)", iX, iY))
+    --print(string.format("Place dropdown menu at (%i, %i)", iX, iY))
 
     Controls.ClassLabel:SetText(Locale.ConvertTextKey("TXT_KEY_PROMO_GROUP_CLASS"))
 
@@ -1016,27 +1012,23 @@ end
 Events.SerialEventUnitInfoDirty.Add(OnUnitInfoDirty)
 
 function Hide()
-    print("Hide()")
-
+    --print("Hide()")
     ContextPtr:SetHide(true)
 end
 
 function Show()
-    print("Show()")
-
+    --print("Show()")
     ContextPtr:SetHide(false)
 end
 
 function Small()
-    print("Small()")
-
+    --print("Small()")
     Resize(config.small)
     Show()
 end
 
 function Normal()
-    print("Normal()")
-
+    --print("Normal()")
     Resize(config.normal)
     Show()
 end

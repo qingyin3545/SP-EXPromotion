@@ -55,7 +55,7 @@ local m_PipeOffsets = {}
 local m_PipeManager = nil
 
 function PipeManagerInit(iSize, sInstanceName, rootControl, parentControl)
-  print(string.format("PipeManagerInit(%d, %s)", iSize, sInstanceName))
+  --print(string.format("PipeManagerInit(%d, %s)", iSize, sInstanceName))
 
   if (m_PipeOffsets[iSize] ~= nil) then
     m_PipeSize = iSize
@@ -67,7 +67,7 @@ function PipeManagerInit(iSize, sInstanceName, rootControl, parentControl)
 end
 
 function PipeManagerReset()
-  print("PipeManagerReset()")
+  --print("PipeManagerReset()")
 
   if (m_PipeManager ~= nil) then
     m_PipeManager:ResetInstances()

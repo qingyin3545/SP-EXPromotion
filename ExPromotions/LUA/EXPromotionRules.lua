@@ -88,7 +88,7 @@ function QYAIUnitCreatedBonus(iPlayer, iUnit, iUnitType, iPlotX, iPlotY)
         return
     end
 	local QYRandomNum = Game.Rand(8, "ExPromotion AI Unit Created Buff Bonus")
-	print("AI Unit Created Buff Bonus Random Num:",QYRandomNum)
+	--print("AI Unit Created Buff Bonus Random Num:",QYRandomNum)
 
 	if (pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_NAVAL_RANGED_SHIP"].ID) --海军远程晋升
 	or pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_NAVAL_RANGED_CRUISER"].ID)) --巡洋舰晋升
