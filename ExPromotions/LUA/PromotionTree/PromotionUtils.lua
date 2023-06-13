@@ -85,6 +85,7 @@ function GetBasicPromotions(sCombatClass,sBasePromotion)
         ..sPrereqs1..
         ") AND c.PromotionType = p.Type AND NOT p.CannotBeChosen AND (p.PromotionPrereqOr1 IS NULL OR p.PromotionPrereqOr1 =("..sPrereqs2..") OR p.PromotionPrereqOr2 =("..sPrereqs2..") OR p.PromotionPrereqOr3 =("..sPrereqs2..") OR p.PromotionPrereqOr4 =("..sPrereqs2..") OR p.PromotionPrereqOr5 =("..sPrereqs2..") OR p.PromotionPrereqOr6 =("..sPrereqs2..") OR p.PromotionPrereqOr7 =("..sPrereqs2..") OR p.PromotionPrereqOr8 =("..sPrereqs2..") OR p.PromotionPrereqOr9 =("..sPrereqs2..") OR p.PromotionPrereqOr10 =("..sPrereqs2..") OR p.PromotionPrereqOr11 =("..sPrereqs2..") OR p.PromotionPrereqOr12 =("..sPrereqs2.."))"
     for row in DB.Query(sQuery) do
+        --选择单位类型以及直接选中单位都会屏蔽下面的晋升
         --屏蔽武僧相关晋升
         if row.Type:match("PROMOTION_FIST_[0-9]+$") == nil 
         and row.Type:match("PROMOTION_[A-Z]+_EXTRA") == nil
@@ -97,7 +98,6 @@ function GetBasicPromotions(sCombatClass,sBasePromotion)
         then
             table.insert(promotions, row.Type)
         end
-        
     end
 
     --防空单位和陆军远程具有不完全相同的晋升线，这里单独处理
@@ -114,7 +114,7 @@ function GetBasicPromotions(sCombatClass,sBasePromotion)
     return promotions
 end
 
-function GetBasePromotions(sCombatClass,sBasePromotion) 
+function GetBasePromotions(sCombatClass,sBasePromotion,showMaxPromotion) 
     local promotions = {}
 
     for _, sPromotion in ipairs(GetBasicPromotions(sCombatClass,sBasePromotion)) do

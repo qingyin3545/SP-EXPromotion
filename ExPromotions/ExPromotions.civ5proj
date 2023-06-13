@@ -173,6 +173,10 @@
     <Folder Include="XML" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ART\EXPromotionPage64.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
     <Content Include="ART\QYPromotionFontIcons.ggxml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
