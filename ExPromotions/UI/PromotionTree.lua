@@ -137,7 +137,7 @@ function PlaceUnit(pUnit, baseIndex, showAllPromotion)
     PlacePromotions(pUnit, sDisplayClass, iUnitBoxX + iUnitBoxSizeX, iCentreLine, sDisplayBasePromotion, baseIndex, showAllPromotion)
 end
 
-function PlacePromotions(pUnit, sCombatClass, iBaseX, iBaseY, sBasePromotion, baseIndex, showMaxPromotion)
+function PlacePromotions(pUnit, sCombatClass, iBaseX, iBaseY, sBasePromotion, baseIndex, showAllPromotion)
     -- if we are here with the non-specific path, then so far we have the correct (as far as this UI is concerned) combat class from our own XML
     -- if we are here from PlaceUnit() we have converted the CombatClass if it wasn't the correct one
     ButtonManagerReset()
@@ -157,7 +157,7 @@ function PlacePromotions(pUnit, sCombatClass, iBaseX, iBaseY, sBasePromotion, ba
     local iWidth = iButtonSizeX + 3 * iPipeSizeX
     AdjustBaseGroupWidth(iWidth)
 
-    basePromotions = GetBasePromotions(sCombatClass, sBasePromotion, showMaxPromotion)
+    basePromotions = GetBasePromotions(sCombatClass, sBasePromotion)
 
     local promotionIndex = #basePromotions - baseIndex + 1
     if promotionIndex < 0 then
@@ -183,7 +183,7 @@ function PlacePromotions(pUnit, sCombatClass, iBaseX, iBaseY, sBasePromotion, ba
             PlaceBasePromotions(pUnit, sCombatClass, basePromotions[baseIndex + 1], iPipeHorizX + iPipeSizeX, iBaseY, 1)
         end
         -- 显示最多4条晋升线?(可能显示不全)
-        if showMaxPromotion then
+        if showAllPromotion then
             if (promotionIndex > 3) then -- this only supports two (additional) non-branching promo lines, which can, however, intertwine after their base promos (e.g. Helicopter specials)
                 PlaceThirdAndFourthPromotionLine(pUnit, sCombatClass, basePromotions[baseIndex + 2],
                     iPipeHorizX + iPipeSizeX, iBaseY, -1)

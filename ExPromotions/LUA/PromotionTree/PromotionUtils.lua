@@ -114,7 +114,7 @@ function GetBasicPromotions(sCombatClass,sBasePromotion)
     return promotions
 end
 
-function GetBasePromotions(sCombatClass,sBasePromotion,showMaxPromotion) 
+function GetBasePromotions(sCombatClass,sBasePromotion) 
     local promotions = {}
 
     for _, sPromotion in ipairs(GetBasicPromotions(sCombatClass,sBasePromotion)) do
