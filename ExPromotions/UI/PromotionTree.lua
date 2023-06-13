@@ -187,13 +187,10 @@ function PlacePromotions(pUnit, sCombatClass, iBaseX, iBaseY, sBasePromotion, ba
         -- 显示最多4条晋升线?(可能显示不全)
         if showAllPromotion then
             if (promotionIndex > 3) then -- this only supports two (additional) non-branching promo lines, which can, however, intertwine after their base promos (e.g. Helicopter specials)
-                PlaceThirdAndFourthPromotionLine(pUnit, sCombatClass, basePromotions[baseIndex + 2],
-                    iPipeHorizX + iPipeSizeX, iBaseY, -1)
-                PlaceThirdAndFourthPromotionLine(pUnit, sCombatClass, basePromotions[baseIndex + 3],
-                    iPipeHorizX + iPipeSizeX, iBaseY, 1)
+                PlaceThirdAndFourthPromotionLine(pUnit, sCombatClass, basePromotions[baseIndex + 2], iPipeHorizX + iPipeSizeX, iBaseY, -1)
+                PlaceThirdAndFourthPromotionLine(pUnit, sCombatClass, basePromotions[baseIndex + 3], iPipeHorizX + iPipeSizeX, iBaseY, 1)
             elseif (promotionIndex > 2) then -- this only supports one (additional) straight, non-branching promo line, which can have up to two dependent promo lines (starting at the last base promo)
-                PlaceThirdPromotionLine(pUnit, sCombatClass, basePromotions[baseIndex + 2], iPipeHorizX + iPipeSizeX,
-                    iBaseY)
+                PlaceThirdPromotionLine(pUnit, sCombatClass, basePromotions[baseIndex + 2], iPipeHorizX + iPipeSizeX, iBaseY)
             end
         end
     end
@@ -474,6 +471,7 @@ function PlaceBasePromotions(pUnit, sCombatClass, basePromotions, iBaseX, iBaseY
         PipeManagerDrawHorizontalPipe(iButtonX - iPipeSizeX, iPipeHorizY, iPipeSizeX)
 
         local iPipeVertX = iButtonX - 2 * iPipeSizeX
+        --box前连接弯曲的线
         DrawTopPipe(iPipeVertX, iPipeHorizY, iDirection)
 
         local iPipeUpY
@@ -482,6 +480,7 @@ function PlaceBasePromotions(pUnit, sCombatClass, basePromotions, iBaseX, iBaseY
         else
             iPipeUpY = iPipeHorizY - (iDirection * (iButtonSizeY + iGapY))
         end
+        --中间弯曲的线
         DrawBottomPipe(iPipeVertX, iPipeUpY, iDirection)
 
         local iPipeVertY, iPipeVertLen
@@ -492,6 +491,7 @@ function PlaceBasePromotions(pUnit, sCombatClass, basePromotions, iBaseX, iBaseY
             iPipeVertY = iPipeUpY + iPipeSizeY
             iPipeVertLen = iPipeHorizY - iPipeVertY
         end
+        --垂直的线
         PipeManagerDrawVerticalPipe(iPipeVertX, iPipeVertY, iPipeVertLen)
 
         if (iPromotion > numPromosHoriz) then
@@ -503,13 +503,14 @@ function PlaceBasePromotions(pUnit, sCombatClass, basePromotions, iBaseX, iBaseY
             local offset = math.min(#basePromotions - iPromotion, 1)
             local lengthHistory = iPromotion + offset
             local iPipeHorizLen = (offset * (2 * iPipeSizeX + iButtonSizeX + iPipeSizeX)) + iPipeSizeX
+            --绘制box后的长直线
             PipeManagerDrawHorizontalPipe(iPipeHorizX, iPipeHorizY, iPipeHorizLen)
-
-            PlaceDependentPromotions(pUnit, sCombatClass, chainedPromotions, iPipeHorizX + iPipeHorizLen, iButtonY,
-                iDirection, lengthHistory)
+            --绘制连续晋升最后的额外晋升(比如双击)
+            PlaceDependentPromotions(pUnit, sCombatClass, chainedPromotions, iPipeHorizX + iPipeHorizLen, iButtonY, iDirection, lengthHistory, iPipeHorizY)
         else
             -- There are no dependent promotions, but we need a short length of pipe to join the next base promotion onto
             if (iPromotion < #basePromotions) then
+                --box后连接短线
                 PipeManagerDrawHorizontalPipe(iPipeHorizX, iPipeHorizY, iPipeSizeX)
             elseif (iPromotion == #basePromotions) then
                 local iWidth = math.max(Controls.BaseGroup:GetSize().x,
@@ -520,7 +521,7 @@ function PlaceBasePromotions(pUnit, sCombatClass, basePromotions, iBaseX, iBaseY
     end
 end
 
-function PlaceDependentPromotions(pUnit, sCombatClass, chainedPromotions, iBaseX, iBaseY, iDirection, lengthHistory)
+function PlaceDependentPromotions(pUnit, sCombatClass, chainedPromotions, iBaseX, iBaseY, iDirection, lengthHistory, iLastPipeHorizY)
     local iPipeSpanY = iBaseY + ((iButtonSizeY - iPipeSizeY) / 2)
     local iPipeSpanAboveY = iPipeSpanY + (iDirection * (iButtonSizeY + iGapY))
 
@@ -533,6 +534,15 @@ function PlaceDependentPromotions(pUnit, sCombatClass, chainedPromotions, iBaseX
     end
 
     local iPipeJoinY = iButtonY + ((iButtonSizeY - iPipeSizeY) / 2)
+    --超出UI范围，进行特殊处理(即最上面的即使只有一个也画直线)
+    local specialDeal
+    if iButtonY < 0
+    or iButtonY > 750
+    then
+        iPipeJoinY = iLastPipeHorizY
+        iButtonY = iPipeJoinY - ((iButtonSizeY - iPipeSizeY) / 2)
+        specialDeal = true
+    end
 
     PipeManagerDrawHorizontalPipe(iBaseX - iPipeSizeX, iPipeSpanY, iPipeSizeX)
 
@@ -556,8 +566,8 @@ function PlaceDependentPromotions(pUnit, sCombatClass, chainedPromotions, iBaseX
         for j = 1, #chainedPromotions[i], 1 do
             local sDependentPromotion = chainedPromotions[i][j]
             DrawPromotionButton(iButtonX, iButtonY, pUnit, sDependentPromotion, sCombatClass)
-
-            if (j == 1) then
+            --print("绘制晋升",iButtonX, iButtonY, pUnit, sDependentPromotion, sCombatClass, iPipeJoinY)
+            if (j == 1 and not specialDeal) then
                 local iPipeVertX = iButtonX - 2 * iPipeSizeX
                 local iPipeVertY, iPipeVertLen
                 if (iDirection == -1) then
