@@ -537,7 +537,7 @@ function PlaceDependentPromotions(pUnit, sCombatClass, chainedPromotions, iBaseX
     --超出UI范围，进行特殊处理(即最上面的即使只有一个也画直线)
     local specialDeal
     if iButtonY < 0
-    or iButtonY > 750
+    or iButtonY > 850
     then
         iPipeJoinY = iLastPipeHorizY
         iButtonY = iPipeJoinY - ((iButtonSizeY - iPipeSizeY) / 2)
