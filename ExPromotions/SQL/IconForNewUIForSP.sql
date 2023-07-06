@@ -1,4 +1,5 @@
-/*CREATE TRIGGER QY_EXPromotion_IconStringSP8
+/*--新图标触发器
+CREATE TRIGGER QY_EXPromotion_IconStringSP8
 AFTER INSERT ON UnitPromotions
 WHEN NEW.IconAtlas = 'QY_EXPROMOTION_ATLAS'
 BEGIN

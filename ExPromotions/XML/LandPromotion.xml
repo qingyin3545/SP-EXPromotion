@@ -76,7 +76,7 @@
 			<Description>TXT_KEY_PROMOTION_FORT_DESTRUCTION_OF_WORKS</Description>
 			<Help>TXT_KEY_PROMOTION_FORT_DESTRUCTION_OF_WORKS_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>31</PortraitIndex>
+			<PortraitIndex>46</PortraitIndex>
 			<IconAtlas>QY_EXPROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SHARED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_FORT_DESTRUCTION_OF_WORKS</PediaEntry>

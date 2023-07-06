@@ -68,18 +68,6 @@ function QYBattleCustomDamage(iBattleUnitType, iBattleType,
 		local additionalDamage = 0
 		local defUnit = defPlayer:GetUnitByID(iDefenseUnitOrCityID)
 
-		--覆盖轰炸城市伤害加成
-		if bDefenseIsCity
-		and attUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_EXP_COVER_BOMBING"].ID) 
-		then
-			local defCity = defPlayer:GetCityByID(iDefenseUnitOrCityID) 
-			if defCity == nil then return 0 end
-			additionalDamage = additionalDamage + defCity:GetMaxHitPoints() * 0.15
-			print("覆盖轰炸城市伤害加成!",additionalDamage)
-		end
-
-		
-		
 		if not bDefenseIsCity then
 			--饱和打击固定加成
 			if attUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_SATURATION_STRIKE_1"].ID) 

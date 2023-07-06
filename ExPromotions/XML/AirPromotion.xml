@@ -20,6 +20,7 @@
 			<PediaEntry>TXT_KEY_PROMOTION_EXP_COVER_BOMBING</PediaEntry>
 			<!--前置攻坚二级-->
 			<PromotionPrereqOr1>PROMOTION_AIR_SIEGE_2</PromotionPrereqOr1>
+			<SiegeInflictDamageChangeMaxHPPercent>15</SiegeInflictDamageChangeMaxHPPercent>
 		</Row>
 
 		<!--海空神剑-->
