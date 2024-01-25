@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GameData>
-	<Language_zh_CN>
+	<Language_en_US>
 		<Row Tag="TXT_KEY_PROMO_SWITCH_MODE" >
 			<Text>单位完整晋升树开关</Text>
 		</Row>
@@ -50,6 +50,5 @@
 		<Row Tag="TXT_KEY_PROMO_MOD_DESC_RECON" >
 			<Text>侦察单位</Text>
 		</Row>
-
-	</Language_zh_CN>
+	</Language_en_US>
 </GameData>

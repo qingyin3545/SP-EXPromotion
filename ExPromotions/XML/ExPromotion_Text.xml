@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Created by ModBuddy on 12/17/2022 7:26:45 PM -->
 <GameData>
-	<Language_zh_CN>
+	<Language_en_US>
 		<!--晋升文本-->
 		<Row Tag="TXT_KEY_PROMOTION_FLAGSHIP_LOCKING">
 			<Text>旗舰锁定</Text>
@@ -84,7 +84,10 @@
 			<Text>穿甲弹</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_BATTLESHIP_ARMOUR_PIERCING_PROJECTILE_HELP">
-			<Text>攻击[COLOR_POSITIVE_TEXT]固定炮台[ENDCOLOR]+100%[ICON_STRENGTH]战斗力。</Text>
+			<Text>
+				攻击[COLOR_POSITIVE_TEXT]固定炮台[ENDCOLOR]+100%[ICON_STRENGTH]战斗力。
+				[NEWLINE](加载[COLOR_POSITIVE_TEXT]世界强权[ENDCOLOR]时，数值增加至225%)
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_BATTLESHIP_SECONDARY_GUN">
@@ -230,13 +233,5 @@
 			<Text>击败敌方[COLOR_POSITIVE_TEXT]精英单位[ENDCOLOR]后，若你未拥有此单位，分出一支小队使用敌方装备武装自己(生成一个新单位)</Text>
 		</Row>
 
-		<Replace Tag="TXT_KEY_PROMOTION_STRATEGIC_BOMBER_HELP" >
-			<Text>
-				能对[COLOR_POSITIVE_TEXT]城市和固定炮台[ENDCOLOR]造成巨大伤害，被[COLOR_NEGATIVE_TEXT]战斗机[ENDCOLOR]单位克制。
-				[NEWLINE]不能攻击隐形单位。
-				[NEWLINE]不能转场到航空母舰上。
-				[NEWLINE]经验获取速率+100%
-			</Text>
-		</Replace>
-	</Language_zh_CN>
+	</Language_en_US>
 </GameData>

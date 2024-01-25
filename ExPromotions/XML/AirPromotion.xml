@@ -2,12 +2,6 @@
 <!-- Created by ModBuddy on 12/31/2022 11:35:50 AM -->
 <GameData>
 	<UnitPromotions>
-		<!--给战略轰炸机添加获取经验速率+100%-->
-		<Update>
-			<Where Type="PROMOTION_STRATEGIC_BOMBER"/>
-			<Set ExperiencePercent="100"/>
-		</Update>
-
 		<!--覆盖轰炸-->
 		<Row>
 			<Type>PROMOTION_EXP_COVER_BOMBING</Type>

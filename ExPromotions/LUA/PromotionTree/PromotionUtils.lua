@@ -86,13 +86,21 @@ function GetBasicPromotions(sCombatClass,sBasePromotion)
         ") AND c.PromotionType = p.Type AND NOT p.CannotBeChosen AND (p.PromotionPrereqOr1 IS NULL OR p.PromotionPrereqOr1 =("..sPrereqs2..") OR p.PromotionPrereqOr2 =("..sPrereqs2..") OR p.PromotionPrereqOr3 =("..sPrereqs2..") OR p.PromotionPrereqOr4 =("..sPrereqs2..") OR p.PromotionPrereqOr5 =("..sPrereqs2..") OR p.PromotionPrereqOr6 =("..sPrereqs2..") OR p.PromotionPrereqOr7 =("..sPrereqs2..") OR p.PromotionPrereqOr8 =("..sPrereqs2..") OR p.PromotionPrereqOr9 =("..sPrereqs2..") OR p.PromotionPrereqOr10 =("..sPrereqs2..") OR p.PromotionPrereqOr11 =("..sPrereqs2..") OR p.PromotionPrereqOr12 =("..sPrereqs2.."))"
     for row in DB.Query(sQuery) do
         --选择单位类型以及直接选中单位都会屏蔽下面的晋升
-        --屏蔽武僧相关晋升
-        if row.Type:match("PROMOTION_FIST_[0-9]+$") == nil 
-        and row.Type:match("PROMOTION_[A-Z]+_EXTRA") == nil
-        --屏蔽立即恢复
-        and row.Type ~= "PROMOTION_INSTA_HEAL"
-        --屏蔽王国冠军
+        if
+        --屏蔽立即恢复(世界强权)
+        row.Type ~= "PROMOTION_INSTA_HEAL"
+        --屏蔽林区、荒漠、雪原操练(世界强权)
+        and row.Type ~= "PROMOTION_DESERT_EXTRA"
+        and row.Type ~= "PROMOTION_SNOW_EXTRA"
+        and row.Type ~= "PROMOTION_JUNJLE_EXTRA"
+        --屏蔽王国冠军(单位拓展)
         and row.Type ~= "PROMOTION_SPUE_KNIGHT_NEW_C"
+        --屏蔽长平烈烈(大汉)
+        and row.Type ~= "PROMOTION_HAN_ELITE_RIDER1"
+        --屏蔽骠骑冠军(大汉)
+        and row.Type ~= "PROMOTION_HAN_ELITE_RIDER2"
+        --屏蔽机甲的机动能力（机甲初始晋升有7个）
+        and not (sCombatClass == "UNITCOMBAT_ARMOR" and row.Type == "PROMOTION_MOBILITY")
         then
             table.insert(promotions, row.Type)
         end
@@ -116,10 +124,24 @@ function GetBasePromotions(sCombatClass,sBasePromotion,showAllPromotion)
     local promotions = {}
 
     for _, sPromotion in ipairs(GetBasicPromotions(sCombatClass,sBasePromotion)) do
-        --如果显示更多晋升线，屏蔽一些晋升
-        --屏蔽装甲一级
+        --如果显示更多晋升线，屏蔽一些晋升以保持显示4条最重要的晋升线
         if showAllPromotion
-        and sPromotion == "PROMOTION_ARMOR_7" 
+        and (
+            --屏蔽侦察兵、攻城单位以外的机动能力
+            (sCombatClass ~= "UNITCOMBAT_RECON" and sCombatClass ~= "PROMOTION_CITY_SIEGE" and sPromotion == "PROMOTION_MOBILITY")
+            --屏蔽重骑兵/坦克/重型机甲晋升猛烈冲锋
+            or sPromotion == "PROMOTION_HEAL_KILL_ENEMY"
+            --屏蔽覆盖火力的火力覆盖晋升
+            or (sCombatClass == "UNITCOMBAT_BOMBER" and sPromotion == "PROMOTION_EQUICK") 
+            --屏蔽坦克和机甲的装甲晋升线
+            or (sCombatClass == "UNITCOMBAT_ARMOR" and sPromotion == "PROMOTION_ARMOR_7") 
+            --屏蔽航母的防御晋升线
+            or (sCombatClass == "UNITCOMBAT_CARRIER" and sPromotion == "PROMOTION_ARMOR_BATTLESHIP_4")
+            --屏蔽战略轰炸机的规避能力
+            or (sCombatClass == "UNITCOMBAT_ARCHER" and sPromotion == "PROMOTION_EVASION")
+            --屏蔽战略轰炸机的空中维修
+            or (sCombatClass == "UNITCOMBAT_ARCHER" and sPromotion == "PROMOTION_AIR_REPAIR")
+        )
         then
             --print("屏蔽晋升",sPromotion)
         else
