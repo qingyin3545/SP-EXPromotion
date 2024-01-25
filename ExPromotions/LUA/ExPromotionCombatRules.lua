@@ -172,7 +172,7 @@ GameEvents.BattleJoined.Add(QYBattleJoined)
 local AirExcaliburID = GameInfo.UnitPromotions["PROMOTION_AIR_EXCALIBUR"].ID
 local ToDieAndLiveID = GameInfo.UnitPromotions["PROMOTION_AIR_TO_DIE_AND_LIVE"].ID
 
-function QYBattleEffect()
+function QYBattleEffect(bIsCaptured)
 	--Defines and status checks
 	if g_DoQYBattle == nil or Players[ g_DoQYBattle.defPlayerID ] == nil
 	or Players[ g_DoQYBattle.attPlayerID ] == nil or not Players[ g_DoQYBattle.attPlayerID ]:IsAlive()
@@ -329,9 +329,8 @@ function QYBattleEffect()
 	and defUnit:IsDead()
 	and defUnit:GetDomainType() == attUnit:GetDomainType()
 	and attUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_EXP_ADAPT_3"].ID) 
-	and attUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_SP_FORCE_3"].ID) 
 	then
-		--单位拥有适应三级以及技能三级后，击败敌方精英获得精通强化
+		--单位拥有适应三级后，击败敌方精英获得精通强化
 		if not attUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_EXP_ADAPT_4"].ID) then
 			attUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_EXP_ADAPT_4"].ID,true)
 			if attPlayer:IsHuman() then
@@ -339,8 +338,8 @@ function QYBattleEffect()
 				Events.AddPopupTextEvent(HexToWorld(hex), Locale.ConvertTextKey("TXT_KEY_PROMOTION_EXP_ADAPT_4"))
 				Events.GameplayFX(hex.x, hex.y, -1)
 			end
-		--若已经拥有精通强化,判断是否捕获
-		else
+		--若已经拥有精通强化,判断是否分兵 (不允许捕获的同时分兵)
+		elseif bIsCaptured == false then
 			local eliteID = GameInfo.UnitClasses[defUnit:GetUnitClassType()].ID
 			local numOfThisElite = attPlayer:GetUnitClassCount(eliteID)
 			print("该单位拥有数:",numOfThisElite)

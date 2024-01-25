@@ -718,7 +718,7 @@ function DrawPromotionButton(iX, iY, pUnit, sPromotion, sCombatClass)
     -- 精通强化
     if (sPromotion == "PROMOTION_EXP_ADAPT_4" and sCombatClass == "UNITCOMBAT_GUN") then
         sToolTip = sToolTip .. "[NEWLINE][NEWLINE]" .. Locale.ConvertTextKey(
-            "同时拥有适应三级[ICON_PROMOTION_QY_EXPROMOTION_45]和技能三级[ICON_PROMOTION_DOGFIGHTING_3]且击败敌军[COLOR_POSITIVE_TEXT]精英单位[ENDCOLOR]后获得")
+            "拥有适应三级[ICON_PROMOTION_QY_EXPROMOTION_45]且击败敌军[COLOR_POSITIVE_TEXT]精英单位[ENDCOLOR]后获得")
     end
     -- 破坏射击
     if (sPromotion == "PROMOTION_CANNON_DAMAGE_SHOT" and sCombatClass == "UNITCOMBAT_SIEGE") then

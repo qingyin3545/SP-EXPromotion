@@ -39,9 +39,6 @@ UPDATE CustomModOptions SET Value = 1 WHERE Name = 'EVENTS_UNIT_CREATED';
 UPDATE CustomModOptions SET Value = 1 WHERE Name = 'PROMOTION_SPLASH_DAMAGE';
 UPDATE CustomModOptions SET Value = 1 WHERE Name = 'PROMOTION_COLLATERAL_DAMAGE';
 
---替换心战效果
-UPDATE UnitPromotions SET CaptureDefeatedEnemy = '0' WHERE Type = 'PROMOTION_SP_FORCE_3';
-
 --航母机位拓展晋升的前置科技和航母的前置科技相同
 UPDATE UnitPromotions SET TechPrereq = (SELECT PrereqTech FROM Units WHERE Type = 'UNIT_CARRIER')  WHERE Type = 'PROMOTION_FLIGHT_DECK_EXPAND_1';
 UPDATE UnitPromotions SET TechPrereq = (SELECT PrereqTech FROM Units WHERE Type = 'UNIT_NUCLEAR_CARRIER')  WHERE Type = 'PROMOTION_FLIGHT_DECK_EXPAND_2';
@@ -55,6 +52,10 @@ UPDATE UnitPromotions SET MoveUsedAttackMod = '3' WHERE Type = 'PROMOTION_NUMIDI
 UPDATE Language_zh_CN 
 SET Text = '每消耗一点[ICON_MOVES]移动力，攻击伤害+3%。[NEWLINE]能够切换为双倍[ICON_MOVES]移动模式，但本回合无法[COLOR_NEGATIVE_TEXT]攻击[ENDCOLOR]。'
 WHERE Tag = 'TXT_KEY_PROMOTION_NUMIDIAN_MARCH_HELP';
+
+--屏蔽俾斯麦和大黄蜂的标记晋升显示
+UPDATE UnitPromotions SET ShowInUnitPanel = 0 WHERE Type = 'PROMOTION_UNIT_ELITE_BATTLECRUISER_MARK';
+UPDATE UnitPromotions SET ShowInUnitPanel = 0 WHERE Type = 'PROMOTION_UNIT_HORNET_MARK';
 
 --UI晋升图标显示前置
 INSERT OR REPLACE INTO IconFontTextures(IconFontTexture,IconFontTextureFile)

@@ -224,18 +224,11 @@
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_EXP_ADAPT_4">
-			<Text>精通强化</Text>
+			<Text>战艺精通</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_EXP_ADAPT_4_HELP">
 			<Text>击败敌方[COLOR_POSITIVE_TEXT]精英单位[ENDCOLOR]后，若你未拥有此单位，分出一支小队使用敌方装备武装自己(生成一个新单位)</Text>
 		</Row>
-
-		<Replace Tag="TXT_KEY_PROMOTION_SP_FORCE_3" >
-			<Text>技能三级——精通</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_SP_FORCE_3_HELP" >
-			<Text>击败敌方非精英单位后概率分出一支小队，使用敌方装备武装自己(生成一个新单位)。[NEWLINE]境外作战+33%[ICON_STRENGTH]战斗力</Text>
-		</Replace>
 
 		<Replace Tag="TXT_KEY_PROMOTION_STRATEGIC_BOMBER_HELP" >
 			<Text>

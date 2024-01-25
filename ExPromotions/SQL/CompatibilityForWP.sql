@@ -24,14 +24,6 @@ UPDATE Language_zh_CN SET Text = '攻击[COLOR_POSITIVE_TEXT]固定炮台[ENDCOL
 WHERE Tag = 'TXT_KEY_PROMOTION_BATTLESHIP_ARMOUR_PIERCING_PROJECTILE_HELP' 
 AND EXISTS (SELECT * FROM ROG_GlobalUserSettings WHERE Type= 'WORLD_POWER_PATCH' AND Value = 1);
 
---世界强权假晋升显示屏蔽
-UPDATE UnitPromotions SET ShowInUnitPanel = CASE
-	WHEN Type = 'PROMOTION_UNIT_ELITE_BATTLECRUISER_MARK' THEN 0
-	WHEN Type = 'PROMOTION_UNIT_HORNET_MARK' THEN 0
-	ELSE ShowInUnitPanel
-	END
-WHERE EXISTS (SELECT * FROM ROG_GlobalUserSettings WHERE Type= 'WORLD_POWER_PATCH' AND Value = 1);
-
 --世界强权兼容-晋升前置以及整合
 INSERT INTO UnitCombatInfosEx(CombatClass,Description,DefaultUnitType,IsDefault,BasePromotion)
 --机械步兵
