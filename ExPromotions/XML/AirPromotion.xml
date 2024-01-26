@@ -32,6 +32,7 @@
 			<CollateralDamagePercent>50</CollateralDamagePercent>
 			<CollateralDamagePlotUnitLimit>2</CollateralDamagePlotUnitLimit>
 			<WarCasualtiesModifier>-100</WarCasualtiesModifier>
+			<CannotBeChosen>true</CannotBeChosen>
 		</Row>
 		<!--向死而生-->
 		<Row>
@@ -48,6 +49,7 @@
 			<!--前置海空神剑-->
 			<PromotionPrereqOr1>PROMOTION_AIR_EXCALIBUR</PromotionPrereqOr1>
 			<MaxHitPointsModifier>100</MaxHitPointsModifier>
+			<CannotBeChosen>true</CannotBeChosen>
 		</Row>
 	</UnitPromotions>
 		

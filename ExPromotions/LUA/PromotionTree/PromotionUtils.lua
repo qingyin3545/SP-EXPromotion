@@ -83,7 +83,7 @@ function GetBasicPromotions(sCombatClass,sBasePromotion)
     local sQuery =
         "SELECT p.Type FROM UnitPromotions p, UnitPromotions_UnitCombats c WHERE c.UnitCombatType = ("
         ..sPrereqs1..
-        ") AND c.PromotionType = p.Type AND NOT p.CannotBeChosen AND (p.PromotionPrereqOr1 IS NULL OR p.PromotionPrereqOr1 =("..sPrereqs2..") OR p.PromotionPrereqOr2 =("..sPrereqs2..") OR p.PromotionPrereqOr3 =("..sPrereqs2..") OR p.PromotionPrereqOr4 =("..sPrereqs2..") OR p.PromotionPrereqOr5 =("..sPrereqs2..") OR p.PromotionPrereqOr6 =("..sPrereqs2..") OR p.PromotionPrereqOr7 =("..sPrereqs2..") OR p.PromotionPrereqOr8 =("..sPrereqs2..") OR p.PromotionPrereqOr9 =("..sPrereqs2..") OR p.PromotionPrereqOr10 =("..sPrereqs2..") OR p.PromotionPrereqOr11 =("..sPrereqs2..") OR p.PromotionPrereqOr12 =("..sPrereqs2.."))"
+        ") AND c.PromotionType = p.Type AND (NOT p.CannotBeChosen OR p.ShowInPT = 1) AND (p.PromotionPrereqOr1 IS NULL OR p.PromotionPrereqOr1 =("..sPrereqs2..") OR p.PromotionPrereqOr2 =("..sPrereqs2..") OR p.PromotionPrereqOr3 =("..sPrereqs2..") OR p.PromotionPrereqOr4 =("..sPrereqs2..") OR p.PromotionPrereqOr5 =("..sPrereqs2..") OR p.PromotionPrereqOr6 =("..sPrereqs2..") OR p.PromotionPrereqOr7 =("..sPrereqs2..") OR p.PromotionPrereqOr8 =("..sPrereqs2..") OR p.PromotionPrereqOr9 =("..sPrereqs2..") OR p.PromotionPrereqOr10 =("..sPrereqs2..") OR p.PromotionPrereqOr11 =("..sPrereqs2..") OR p.PromotionPrereqOr12 =("..sPrereqs2.."))"
     for row in DB.Query(sQuery) do
         --选择单位类型以及直接选中单位都会屏蔽下面的晋升
         if
@@ -111,7 +111,7 @@ function GetBasicPromotions(sCombatClass,sBasePromotion)
         sPrereqs2 = '"'.."PROMOTION_ARCHERY_COMBAT"..'"'
         sQuery =
         "SELECT p.Type FROM UnitPromotions p, UnitPromotions_UnitCombats c WHERE c.UnitCombatType = ("
-        ..sPrereqs1..") AND c.PromotionType = p.Type AND NOT p.CannotBeChosen AND p.Type != 'PROMOTION_INSTA_HEAL' AND (p.PromotionPrereqOr1 IS NULL OR p.PromotionPrereqOr1 =("..sPrereqs2..") OR p.PromotionPrereqOr2 =("..sPrereqs2..") OR p.PromotionPrereqOr3 =("..sPrereqs2..") OR p.PromotionPrereqOr4 =("..sPrereqs2..") OR p.PromotionPrereqOr5 =("..sPrereqs2..") OR p.PromotionPrereqOr6 =("..sPrereqs2..") OR p.PromotionPrereqOr7 =("..sPrereqs2..") OR p.PromotionPrereqOr8 =("..sPrereqs2..") OR p.PromotionPrereqOr9 =("..sPrereqs2..") OR p.PromotionPrereqOr10 =("..sPrereqs2..") OR p.PromotionPrereqOr11 =("..sPrereqs2..") OR p.PromotionPrereqOr12 =("..sPrereqs2.."))"
+        ..sPrereqs1..") AND c.PromotionType = p.Type AND (NOT p.CannotBeChosen OR p.ShowInPT = 1) AND p.Type != 'PROMOTION_INSTA_HEAL' AND (p.PromotionPrereqOr1 IS NULL OR p.PromotionPrereqOr1 =("..sPrereqs2..") OR p.PromotionPrereqOr2 =("..sPrereqs2..") OR p.PromotionPrereqOr3 =("..sPrereqs2..") OR p.PromotionPrereqOr4 =("..sPrereqs2..") OR p.PromotionPrereqOr5 =("..sPrereqs2..") OR p.PromotionPrereqOr6 =("..sPrereqs2..") OR p.PromotionPrereqOr7 =("..sPrereqs2..") OR p.PromotionPrereqOr8 =("..sPrereqs2..") OR p.PromotionPrereqOr9 =("..sPrereqs2..") OR p.PromotionPrereqOr10 =("..sPrereqs2..") OR p.PromotionPrereqOr11 =("..sPrereqs2..") OR p.PromotionPrereqOr12 =("..sPrereqs2.."))"
         for row in DB.Query(sQuery) do
             table.insert(promotions, row.Type)
         end

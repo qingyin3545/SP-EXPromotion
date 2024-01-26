@@ -141,6 +141,7 @@
 			<PediaType>PEDIA_SCOUTING</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_EXP_ADAPT_4</PediaEntry>
 			<PromotionPrereqOr1>PROMOTION_EXP_ADAPT_3</PromotionPrereqOr1>
+			<CannotBeChosen>true</CannotBeChosen>
 		</Row>
 		
 	</UnitPromotions>

@@ -14,6 +14,7 @@
 			<PediaEntry>TXT_KEY_PROMOTION_FLAGSHIP_LOCKING</PediaEntry>
 			<PromotionPrereqOr1>PROMOTION_SUBMARINE_COMBAT</PromotionPrereqOr1>
 			<PromotionPrereqOr2>PROMOTION_NAVAL_HIT_AND_RUN</PromotionPrereqOr2>
+			<CannotBeChosen>true</CannotBeChosen>
 		</Row>
 		<!--旗舰锁定前置1-->
 		<Row>
@@ -92,6 +93,7 @@
 			<SplashDamagePercent>50</SplashDamagePercent>
 			<SplashDamageRadius>1</SplashDamageRadius>
 			<SplashDamagePlotUnitLimit>1</SplashDamagePlotUnitLimit>
+			<CannotBeChosen>true</CannotBeChosen>
 
 		</Row>
 		<!--齐射强化-->

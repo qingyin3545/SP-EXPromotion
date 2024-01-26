@@ -19,9 +19,9 @@ SELECT 'UNIT_CITADEL_EARLY' , 'PROMOTION_FORT_DESTRUCTION_OF_WORKS' UNION ALL
 SELECT 'UNIT_DREADNOUGHT' , 'PROMOTION_BATTLESHIP_SECONDARY_GUN' UNION ALL
 SELECT 'UNIT_BATTLESHIP' , 'PROMOTION_BATTLESHIP_SECONDARY_GUN';*/
 
---增加一个UnitPromotions的列来屏蔽晋升可选(为了让这些晋升仍然显示在晋升树里面)
-ALTER TABLE UnitPromotions ADD COLUMN CannotChooseInPT integer not null default 0;
-UPDATE UnitPromotions SET CannotChooseInPT = 1 WHERE 
+--增加一个UnitPromotions的列来让这些不可选晋升仍然显示在晋升树里面
+ALTER TABLE UnitPromotions ADD COLUMN ShowInPT integer not null default 0;
+UPDATE UnitPromotions SET ShowInPT = 1 WHERE 
 --舰炮齐射
 Type = 'PROMOTION_SHIPBORNE_GUN_SALVO' OR
 --旗舰锁定

@@ -8,11 +8,6 @@ function QYUnitCanHavePromotion(iPlayer, iUnit, iPromotionType)
 		return
 	end
 
-	--限制部分晋升不可选择
-	if GameInfo.UnitPromotions[iPromotionType].CannotChooseInPT == 1 then
-		return false
-	end
-
 	--限制破坏射击需要间接火力
 	if iPromotionType == GameInfoTypes.PROMOTION_CANNON_DAMAGE_SHOT then
 		if pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_INDIRECT_FIRE"].ID) then
