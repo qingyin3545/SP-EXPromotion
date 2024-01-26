@@ -193,11 +193,11 @@
 			<UnitType>UNIT_NUMIDIAN</UnitType>
 			<PromotionType>PROMOTION_MARCH</PromotionType>
 		</Row>
-		<!--给火厢车添加战术积累-->
+		<!--给火厢车添加战术积累
 		<Row>
 			<UnitType>UNIT_KOREAN_HWACHA</UnitType>
 			<PromotionType>PROMOTION_GAIN_EXPERIENCE_2</PromotionType>
-		</Row>
+		</Row>-->
 		<!--给大贝尔塔炮添加穿甲弹-->
 		<Row>
 			<UnitType>UNIT_SUPER_HOWITZER</UnitType>

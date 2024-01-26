@@ -14,57 +14,24 @@ function QYUnitCanHavePromotion(iPlayer, iUnit, iPromotionType)
 			return true
 		end
 		return false
-	end
-
+	
 	--限制斯巴达才可选血战到底
-	if iPromotionType == GameInfoTypes.PROMOTION_SPARTAN300_FIGHT_TO_THE_END then
+	elseif iPromotionType == GameInfoTypes.PROMOTION_SPARTAN300_FIGHT_TO_THE_END then
 		if pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_ELITE_DEFENSE"].ID) then
 			return true
 		end
 		return false
-	end
 
-	--限制俾斯麦需要舰炮齐射才可选齐射强化
-	if iPromotionType == GameInfoTypes.PROMOTION_SHIPBORNE_GUN_SALVO_2 then
+	--限制俾斯麦才可选齐射强化
+	elseif iPromotionType == GameInfoTypes.PROMOTION_SHIPBORNE_GUN_SALVO_2 then
 		if pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_UNIT_ELITE_BATTLECRUISER_MARK"].ID) then
 			return true
 		end
 		return false
-	end
 
-	--限制穿甲弹额外前置旗舰
-	if iPromotionType == GameInfoTypes.PROMOTION_BATTLESHIP_ARMOUR_PIERCING_PROJECTILE then
+	--限制穿甲弹额外前置旗舰单位
+	elseif iPromotionType == GameInfoTypes.PROMOTION_BATTLESHIP_ARMOUR_PIERCING_PROJECTILE then
 		if pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_NAVAL_CAPITAL_SHIP"].ID) then
-			return true
-		end
-		return false
-	end
-
-	--重型机甲不能选冲锋
-	if iPromotionType == GameInfoTypes.PROMOTION_CHARGE_1 then
-		if pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_HEAVY_ROBORT"].ID) then
-			return false
-		end
-		return true
-	end
-
-	--限制铁甲舰之前的海军近战选择主炮强化和雷击战术，并设置这两个晋升互斥
-	if iPromotionType == GameInfoTypes.PROMOTION_DESTROYER_MAIN_GUN_REINFORCEMENT then  --主炮强化
-		if pUnit:GetUnitCombatType() == GameInfoTypes.UNITCOMBAT_NAVALMELEE then
-			if pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_DESTROYER_LIGHTNING_STRIKE_TACTICS"].ID)
-			then
-				return false
-			end
-			return true
-		end
-		return false
-	end
-	if iPromotionType == GameInfoTypes.PROMOTION_DESTROYER_LIGHTNING_STRIKE_TACTICS then--雷击战术
-		if pUnit:GetUnitCombatType() == GameInfoTypes.UNITCOMBAT_NAVALMELEE then
-			if pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_DESTROYER_MAIN_GUN_REINFORCEMENT"].ID)
-			then
-				return false
-			end
 			return true
 		end
 		return false
@@ -74,6 +41,7 @@ function QYUnitCanHavePromotion(iPlayer, iUnit, iPromotionType)
 end
 GameEvents.CanHavePromotion.Add(QYUnitCanHavePromotion)
 
+--ai概率自动赋予晋升
 local FlagShipLock0 =GameInfo.UnitPromotions["PROMOTION_FLAGSHIP_LOCKING"].ID
 function QYAIUnitCreatedBonus(iPlayer, iUnit, iUnitType, iPlotX, iPlotY)
 

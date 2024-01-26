@@ -204,6 +204,7 @@
 			<AttackMod>33</AttackMod>
 			<!--海事工程学解锁-->
 			<TechPrereq>TECH_MARINE_ENGINEERING</TechPrereq>
+			<MutuallyExclusiveGroup>3545</MutuallyExclusiveGroup>
 		</Row>
 		<!--雷击战术-->
 		<Row>
@@ -219,6 +220,7 @@
 			<PediaEntry>TXT_KEY_PROMOTION_DESTROYER_LIGHTNING_STRIKE_TACTICS</PediaEntry>
 			<!--海事工程学解锁-->
 			<TechPrereq>TECH_MARINE_ENGINEERING</TechPrereq>
+			<MutuallyExclusiveGroup>3545</MutuallyExclusiveGroup>
 		</Row>
 
 
