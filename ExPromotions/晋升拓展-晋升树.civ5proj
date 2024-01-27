@@ -105,14 +105,14 @@
         <Type>Mod</Type>
         <Name>Super Power - Remaking of World Order</Name>
         <Id>f9b9c8aa-b6d1-4188-9239-c1de2207ab7c</Id>
-        <MinVersion>9</MinVersion>
+        <MinVersion>10</MinVersion>
         <MaxVersion>999</MaxVersion>
       </Association>
       <Association>
         <Type>Mod</Type>
         <Name>(1) CIV5MPDLL</Name>
         <Id>a2969a0a-e4da-41cc-9e0b-19b29aa971d8</Id>
-        <MinVersion>6</MinVersion>
+        <MinVersion>20</MinVersion>
         <MaxVersion>999</MaxVersion>
       </Association>
     </ModDependencies>
@@ -141,13 +141,6 @@
         <Type>Mod</Type>
         <Name>Promotion Tree</Name>
         <Id>3de8a83f-cd90-4d2c-b1f2-02c4ec6b3b03</Id>
-        <MinVersion>0</MinVersion>
-        <MaxVersion>999</MaxVersion>
-      </Association>
-      <Association>
-        <Type>Mod</Type>
-        <Name>晋升拓展-晋升树（二选一）</Name>
-        <Id>d099f2a6-209a-4753-ad81-353e061c4249</Id>
         <MinVersion>0</MinVersion>
         <MaxVersion>999</MaxVersion>
       </Association>
